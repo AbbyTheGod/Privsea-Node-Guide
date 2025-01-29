@@ -89,3 +89,8 @@ docker logs -f CONTAINER_ID
 - CPU must not be ARM architecture
 - OKX wallet recommended
 
+.md-content {
+    --md-typeset-a-color: #09bfdd;
+}
+
+
