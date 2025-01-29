@@ -56,7 +56,7 @@ docker logs -f CONTAINER_ID
 ```
 
 ### 6. Dashboard Setup
-```
+
 1. Visit https://deepsea-beta.privasea.ai
 2. Connect wallet (ensure ETH on Arbitrum Sepolia)
 3. Click "Set up now"
@@ -64,10 +64,10 @@ docker logs -f CONTAINER_ID
 5. Set commission (1-3% recommended)
 6. Enter node address from step 3
 7. Click "Setup my node"
-```
+
 
 ### 7. Staking Setup
-```
+
 1. Get TPRAI tokens:
    - Visit: https://deepsea-beta.privasea.ai/deepSeaFaucet
    - Claim 1 TPRAI
@@ -79,13 +79,13 @@ docker logs -f CONTAINER_ID
    - Set gas: 300000
    - Network commission: 0.101
    - Priority fee: 0.10
-```
+
 
 ### Important Notes
-```
+
 ⚠️ REMEMBER:
 - Save your node address and password
 - Only supports Ubuntu OS
 - CPU must not be ARM architecture
 - OKX wallet recommended
-```
+
