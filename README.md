@@ -10,7 +10,7 @@ SYSTEM REQUIREMENTS
 • CPU: 6 cores (x86)
 ```
 
-<a href="https://my.virtarix.com/aff.php?aff=42" target="_blank">Click Me</a>
++ Buy VPS M HERE 👉 [Click Me](https://my.virtarix.com/aff.php?aff=42)
 
 ### 1. Install Docker
 ```bash
