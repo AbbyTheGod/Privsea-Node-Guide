@@ -1,4 +1,4 @@
-Here's how to make all the content copiable by formatting it in code blocks:
+
 
 ## 🚀 Privasea Node Setup Guide
 
