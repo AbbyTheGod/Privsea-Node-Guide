@@ -10,6 +10,8 @@ SYSTEM REQUIREMENTS
 • CPU: 6 cores (x86)
 ```
 
+ Buy VPS M HERE 👉 https://my.virtarix.com/aff.php?aff=42 
+
 ### 1. Install Docker
 ```bash
 source <(wget -O - https://raw.githubusercontent.com/zunxbt/installation/main/docker.sh)
