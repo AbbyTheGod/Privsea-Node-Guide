@@ -61,8 +61,6 @@ Now run the below command to start your Privasea Privanetix Node. Make sure to r
 KEYSTORE_PASSWORD=ENTER_YOUR_KEYSTORE_PASSWORD && docker run -d --name privanetix-node -v "$HOME/privasea/config:/app/config" -e KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD privasea/acceleration-node-beta:latest
 ```
 
-Now follow the guide from **Step 3 (Manage my Privanetix node)** from this docs.
-
 Citations:
 [1] https://github.com/zunxbt/privasea-privanetix-node
 [2] https://github.com/zunxbt/privasea-privanetix-node
