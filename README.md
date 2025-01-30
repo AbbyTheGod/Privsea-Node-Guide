@@ -1,93 +1,71 @@
+# Privasea Privanetix Node
 
+## Minimum System Requirements
 
-## 🚀 Privasea Node Setup Guide
+| Component | Requirement |
+|-----------|------------|
+| Operating System (OS) | Ubuntu (Recommended) |
+| CPU Architecture | amd64 (x86 architecture) |
+| Storage | 100GB available storage |
+| Memory (RAM) | 4GB RAM |
+| Processor | 6 cores |
 
-```
-SYSTEM REQUIREMENTS
-• OS: Ubuntu (Recommended)
-• Storage: 100GB
-• RAM: 8GB
-• CPU: 6 cores (x86)
-```
+- You can buy VPS from PQ Hosting using cryptocurrency
 
-+ Buy VPS M HERE 👉 [Click Me](https://my.virtarix.com/aff.php?aff=42)
+## Installation
 
-### 1. Install Docker
+First install Docker in your system if it is not already there by using below command:
+
 ```bash
 source <(wget -O - https://raw.githubusercontent.com/zunxbt/installation/main/docker.sh)
+```
 
+```bash
 sudo groupadd docker && sudo usermod -aG docker $(whoami) && newgrp docker
 ```
 
-### 2. Pull Docker Image
+First pull the docker image using the following command:
+
 ```bash
 docker pull privasea/acceleration-node-beta:latest
 ```
 
-### 3. Create Directory & Configure
+Create a directory and navigate to it:
+
 ```bash
-# Create directory
 mkdir -p ~/privasea/config && cd ~/privasea
+```
 
-# Generate keystore
-docker run --rm -it -v "$HOME/privasea/config:/app/config" \
-privasea/acceleration-node-beta:latest ./node-calc new_keystore
+Run the below command to get a new wallet keystore. Here you need input a password after running the below command, make sure to remember it for future use and also note down the `node address` as well:
 
-# Rename keystore file
+```bash
+docker run --rm -it -v "$HOME/privasea/config:/app/config" privasea/acceleration-node-beta:latest ./node-calc new_keystore
+```
+
+Move the keystore file to a new file:
+
+```bash
 mv $HOME/privasea/config/UTC--* $HOME/privasea/config/wallet_keystore
 ```
 
-### 4. Start Node
+Now visit this Privanetix Dashboard:
+- Connect a wallet where you will receive reward
+- Give the node any name
+- Set up commission (I will use 1%)
+- Enter the `node address` you noted down in above step
+- Click on **Set up my node** option
+
+Now run the below command to start your Privasea Privanetix Node. Make sure to replace **ENTER_YOUR_KEYSTORE_PASSWORD** with your **Keystore Password** you provided in the above steps:
+
 ```bash
-# Replace YOUR_PASSWORD with your keystore password
-KEYSTORE_PASSWORD=YOUR_PASSWORD && docker run -d --name privanetix-node \
--v "$HOME/privasea/config:/app/config" \
--e KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD \
-privasea/acceleration-node-beta:latest
+KEYSTORE_PASSWORD=ENTER_YOUR_KEYSTORE_PASSWORD && docker run -d --name privanetix-node -v "$HOME/privasea/config:/app/config" -e KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD privasea/acceleration-node-beta:latest
 ```
 
-### 5. Monitor Node
-```bash
-# Check container ID
-docker ps
+Now follow the guide from **Step 3 (Manage my Privanetix node)** from this docs.
 
-# Check logs
-docker logs -f CONTAINER_ID
-```
+Citations:
+[1] https://github.com/zunxbt/privasea-privanetix-node
+[2] https://github.com/zunxbt/privasea-privanetix-node
 
-### 6. Dashboard Setup
-
-1. Visit https://deepsea-beta.privasea.ai
-2. Connect wallet (ensure ETH on Arbitrum Sepolia)
-3. Click "Set up now"
-4. Enter node name
-5. Set commission (1-3% recommended)
-6. Enter node address from step 3
-7. Click "Setup my node"
-
-
-### 7. Staking Setup
-
-1. Get TPRAI tokens:
-   - Visit: https://deepsea-beta.privasea.ai/deepSeaFaucet
-   - Claim 1 TPRAI
-
-2. Stake tokens:
-   - Go to: https://deepsea-beta.privasea.ai/staking
-   - Click "Details" under Staking Details
-   - Enter amount: 1 TPRAI
-   - Set gas: 300000
-   - Network commission: 0.101
-   - Priority fee: 0.10
-
-
-### Important Notes
-
-⚠️ REMEMBER:
-- Save your node address and password
-- Only supports Ubuntu OS
-- CPU must not be ARM architecture
-- OKX wallet recommended
-
-
-
+---
+Answer from Perplexity: pplx.ai/share
