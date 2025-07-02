@@ -10,7 +10,6 @@
 | Memory (RAM) | 4GB RAM |
 | Processor | 6 cores |
 
-- You can buy VPS from PQ Hosting using cryptocurrency
 
 ## Installation
 
