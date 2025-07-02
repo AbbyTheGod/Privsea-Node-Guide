@@ -1,6 +1,6 @@
 # Privasea Privanetix Node
 
-## Minimum System Requirementss
+## Minimum System Requirements
 
 | Component | Requirement |
 |-----------|------------|
